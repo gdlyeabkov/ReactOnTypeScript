@@ -18,7 +18,6 @@ export const TodosPage:React.FC=()=>{
     const newTodo:ITodo={
       title, id:Date.now(), completed:false
     }
-    // setTodos([newTodo, ...todos])
     setTodos((prev)=>[newTodo, ...prev])
   }
   const toggleHandler=(id:number)=>{
@@ -40,8 +39,8 @@ export const TodosPage:React.FC=()=>{
     }
     return (
         <>
-        <TodoForm onAdd={addHandler}/>
-              <TodoList todos={todos} onToggle={toggleHandler} onRemove={removeHandler}></TodoList>
-              </>
+          <TodoForm onAdd={addHandler}/>
+          <TodoList todos={todos} onToggle={toggleHandler} onRemove={removeHandler}></TodoList>
+        </>
     )
 }
